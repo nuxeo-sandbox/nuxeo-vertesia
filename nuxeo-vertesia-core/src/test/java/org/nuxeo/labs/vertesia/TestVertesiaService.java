@@ -11,7 +11,7 @@ import org.nuxeo.labs.vertesia.automation.service.VertesiaService;
 import org.nuxeo.runtime.test.runner.Features;
 import org.nuxeo.runtime.test.runner.FeaturesRunner;
 
-import javax.inject.Inject;
+import jakarta.inject.Inject;
 
 @RunWith(FeaturesRunner.class)
 @Features(TestVertesiaFeature.class)
