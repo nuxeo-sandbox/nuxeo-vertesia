@@ -14,7 +14,7 @@ mvn clean install -DskipTests
 The integration between the Nuxeo Platform and Vertesia is meant to be as versatile as possible and leverages Nuxeo's automation framework.
 
 ### Run Execution
-The operation to execute a Composable Prompts interaction is `ComposablePrompts.ExecInteraction`
+The operation to execute a Vertesia interaction is `Vertesia.ExecInteraction`
 
 Parameters:
 
@@ -26,9 +26,9 @@ Parameters:
 | interactionInput | The interaction JSON input                                               | string          | true     |               |
 | temperature      | The model temperature                                                    | string (double) | false    |               |
 | max_tokens       | The maximum number of tokens for the output                              | string (long)   | false    |               |
-| tags             | Tags to associate to the run in composable prompts                       | Array of string | false    |               |
+| tags             | Tags to associate to the Vertesia run                                    | Array of string | false    |               |
 
-Output: A string Blob containing the Composable Prompt REST API JSON response
+Output: A string Blob containing the Vertesia REST API JSON response
 
 ### Example
 Below is an automation script example which uses the text extract of a file document, uses it with an interaction and stores the result in `dc:description`:
@@ -49,7 +49,7 @@ function run(input, params) {
       text: textBlob.getString()
   };
   
-  var ccResponse = ComposablePrompts.ExecInteraction(null, {
+  var ccResponse = Vertesia.ExecInteraction(null, {
       'interactionId': 'MyInteractionId', 
       'environmentId': 'MyEnvironmentId', 
       'modelId': 'MyModelId', 
@@ -77,10 +77,11 @@ function run(input, params) {
 ## Configuration
 The following nuxeo.conf properties must be configured in order to use the plugin
 
-| Property name                   | description                                                 |
-|---------------------------------|-------------------------------------------------------------|
-| composable.prompts.api.key      | The API key to use when calling Composable Prompts REST API |
-| composable.prompts.http.timeout | The timeout for http requests (default 60 seconds)          |
+| Property name         | description                                           |
+|-----------------------|-------------------------------------------------------|
+| vertesia.api.url      | The API base url                                      |
+| vertesia.api.key      | The API key to use when calling the Vertesia REST API |
+| vertesia.http.timeout | The timeout for http requests (default 60 seconds)    |
 
 
 # Support

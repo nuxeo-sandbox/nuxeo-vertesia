@@ -1,0 +1,41 @@
+<!-- See documentation at http://doc.nuxeo.com/x/HgIz -->
+<package type="addon" name="nuxeo-vertesia" version="@VERSION@">
+  <title>Nuxeo Vertesia Connector</title>
+  <description>
+    <p>A connector which provides a simple and easy to use API to leverage the Vertesia platform capabilities across a Nuxeo application.</p>
+  </description>
+  <!-- <home-page>http://doc.nuxeo.com/</home-page> -->
+  <vendor>Hyland</vendor>
+  <installer restart="true" />
+  <uninstaller restart="true" />
+  <!-- <hotreload-support>false</hotreload-support> -->
+  <!-- <require-terms-and-conditions-acceptance>false</require-terms-and-conditions-acceptance> -->
+  <!-- Nuxeo Validation: none | inprocess | primary_validation | nuxeo_certified -->
+  <nuxeo-validation>none</nuxeo-validation>
+  <!-- Production State: production_ready | testing | proto -->
+  <production-state>testing</production-state>
+  <supported>false</supported>
+  <platforms>
+    <platform>lts-@NUXEO_TARGET_VERSION@</platform>
+  </platforms>
+  <!-- Dependencies on other packages -->
+  <!-- <dependencies> -->
+  <!-- <package>another-package:1.0.0:1.0.0</package> -->
+  <!-- If you require JSF UI package:  -->
+  <!-- <package>nuxeo-jsf-ui</package> -->
+  <!-- If you require WEB UI package:  -->
+  <!-- <package>nuxeo-web-ui</package> -->
+  <!-- </dependencies> -->
+  <!-- Conflicts with other packages -->
+  <!-- <conflicts> -->
+  <!-- <package>a-conflicting-package:1.0.0:1.0.0</package> -->
+  <!-- </conflicts> -->
+  <!-- Provides features of other packages -->
+  <!-- <provides> -->
+  <!-- <package>an-embedded-package:1.0.0:1.0.0</package> -->
+  <!-- </provides> -->
+  <license>Apache License, Version 2.0</license>
+  <license-url>http://www.apache.org/licenses/LICENSE-2.0</license-url>
+  <!-- Visibility: PRIVATE | MARKETPLACE | DEV | PUBLIC -->
+  <visibility>PUBLIC</visibility>
+</package>

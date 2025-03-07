@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.nuxeo.labs.vertesia</groupId>
+    <artifactId>nuxeo-vertesia-parent</artifactId>
+    <version>2023.3.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>nuxeo-vertesia-core</artifactId>
+  <name>Nuxeo Vertesia core</name>
+  <description />
+
+  <dependencies>
+    <dependency>
+      <groupId>org.nuxeo.ecm.automation</groupId>
+      <artifactId>nuxeo-automation-core</artifactId>
+      <scope>provided</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>okhttp</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.nuxeo.ecm.automation</groupId>
+      <artifactId>nuxeo-automation-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <configuration>
+          <systemPropertyVariables>
+            <VertesiaBaseUrl>https://studio-server-production.api.vertesia.io/api/v1</VertesiaBaseUrl>
+            <VertesiaApiKey>${VertesiaApiKey}</VertesiaApiKey>
+            <VertesiaInteractionId>${VertesiaInteractionId}</VertesiaInteractionId>
+            <VertesiaEnvironmentId>${VertesiaEnvironmentId}</VertesiaEnvironmentId>
+          </systemPropertyVariables>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>

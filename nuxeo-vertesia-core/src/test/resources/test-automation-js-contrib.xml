@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.labs.vertesia.test.automationjs">
+
+    <extension target="org.nuxeo.automation.scripting.internals.AutomationScriptingComponent" point="operation">
+
+        <scriptedOperation id="javascript.test_cp_automation_js">
+            <inputType>document</inputType>
+            <outputType>document</outputType>
+            <category>javascript</category>
+            <param name="interactionId" type="string"/>
+            <param name="environmentId" type="string"/>
+            <param name="modelId" type="string"/>
+            <script><![CDATA[function run(input, params) {
+                  return Vertesia.ExecInteraction(null, {
+                      interactionId: params.interactionId,
+                      environmentId: params.environmentId,
+                      modelId: params.modelId,
+                      temperature: '0.8',
+                      max_tokens: '100',
+                      tags: ['tag1','tag2'],
+                      interactionInput: JSON.stringify({text: 'Hello. How are you doing today?'})
+                  });
+             }]]>
+            </script>
+        </scriptedOperation>
+
+    </extension>
+
+</component>

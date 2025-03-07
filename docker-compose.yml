@@ -10,7 +10,7 @@ services:
     volumes:
       - mongodb_data:/data/db
   opensearch:
-    image: opensearchproject/opensearch:1.3.16
+    image: opensearchproject/opensearch:1.3.20
     hostname: opensearch
     restart: always
     healthcheck:
@@ -30,7 +30,7 @@ services:
     volumes:
       - "os_data:/usr/share/opensearch/data"
   nuxeo:
-    image: nuxeo-composable-prompts:2023.3.0-SNAPSHOT
+    image: nuxeo-vertesia:2023.3.0-SNAPSHOT
     env_file:
       - ./.env
     ports:

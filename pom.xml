@@ -4,13 +4,13 @@
   <parent>
     <groupId>org.nuxeo</groupId>
     <artifactId>nuxeo-parent</artifactId>
-    <version>2023.11</version>
+    <version>2023.26</version>
   </parent>
 
-  <groupId>org.nuxeo.labs.composable.prompts</groupId>
-  <artifactId>nuxeo-composable-prompts-parent</artifactId>
+  <groupId>org.nuxeo.labs.vertesia</groupId>
+  <artifactId>nuxeo-vertesia-parent</artifactId>
   <version>2023.3.0-SNAPSHOT</version>
-  <name>Nuxeo composable prompts parent</name>
+  <name>Nuxeo Vertesia Parent</name>
   <description />
   <packaging>pom</packaging>
 
@@ -22,9 +22,9 @@
   </properties>
 
   <modules>
-    <module>nuxeo-composable-prompts-core</module>
-    <module>nuxeo-composable-prompts-package</module>
-    <module>nuxeo-composable-prompts-docker</module>
+    <module>nuxeo-vertesia-core</module>
+    <module>nuxeo-vertesia-package</module>
+    <module>nuxeo-vertesia-docker</module>
   </modules>
 
   <scm />
@@ -38,18 +38,18 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>org.nuxeo.labs.composable.prompts</groupId>
-        <artifactId>nuxeo-composable-prompts-core</artifactId>
+        <groupId>org.nuxeo.labs.vertesia</groupId>
+        <artifactId>nuxeo-vertesia-core</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.nuxeo.labs.composable.prompts</groupId>
-        <artifactId>nuxeo-composable-prompts-package</artifactId>
+        <groupId>org.nuxeo.labs.vertesia</groupId>
+        <artifactId>nuxeo-vertesia-package</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>
-        <groupId>org.nuxeo.labs.composable.prompts</groupId>
-        <artifactId>nuxeo-composable-prompts-docker</artifactId>
+        <groupId>org.nuxeo.labs.vertesia</groupId>
+        <artifactId>nuxeo-vertesia-docker</artifactId>
         <version>${project.version}</version>
       </dependency>
     </dependencies>

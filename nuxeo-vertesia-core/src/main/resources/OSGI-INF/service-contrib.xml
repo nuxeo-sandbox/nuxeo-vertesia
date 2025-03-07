@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<component name="org.nuxeo.labs.vertesia.service">
+
+    <implementation class="org.nuxeo.labs.vertesia.automation.service.VertesiaComponent" />
+
+    <service>
+        <provide interface="org.nuxeo.labs.vertesia.automation.service.VertesiaService" />
+    </service>
+
+</component>

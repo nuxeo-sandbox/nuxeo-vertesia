@@ -1,0 +1,9 @@
+Bundle-ActivationPolicy: lazy
+Bundle-ClassPath: .
+Manifest-Version: 1.0
+Bundle-Vendor: org.nuxeo.labs.vertesia
+Bundle-Version: 1.0.0
+Bundle-Name: nuxeo-vertesia-core
+Bundle-ManifestVersion: 2
+Bundle-SymbolicName: nuxeo-vertesia-core;singleton=true
+Nuxeo-Component: OSGI-INF/automation-contrib.xml, OSGI-INF/service-contrib.xml
