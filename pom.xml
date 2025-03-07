@@ -67,8 +67,8 @@
       </snapshots>
     </repository>
     <repository>
-      <id>maven-internal</id>
-      <url>https://packages.nuxeo.com/repository/maven-internal/</url>
+      <id>maven-private</id>
+      <url>https://packages.nuxeo.com/repository/maven-private/</url>
       <releases>
         <enabled>true</enabled>
       </releases>
