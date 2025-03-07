@@ -1,6 +1,8 @@
 package org.nuxeo.labs.vertesia;
 
 import org.junit.Assert;
+import org.junit.Assume;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.nuxeo.ecm.automation.AutomationService;
@@ -31,6 +33,14 @@ public class TestVertesiaRunOp {
 
     @Inject
     protected AutomationService automationService;
+
+    @Inject
+    protected TestVertesiaFeature vertesiaFeature;
+
+    @Before
+    public void initialize() {
+        Assume.assumeTrue(vertesiaFeature.isKeySet());
+    }
 
     @Test
     public void testSuccess() throws OperationException {
