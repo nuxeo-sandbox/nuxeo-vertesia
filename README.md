@@ -1,17 +1,17 @@
 # Description
 A plugin that provides a simple and easy to use integration pattern
-between [Composable Prompts](https://composableprompts.com/) and the Nuxeo Platform.
+between [Vertesia](https://vertesiahq.com/) and the Nuxeo Platform.
 
 # How to build
 ```bash
-git clone https://github.com/nuxeo-sandbox/nuxeo-composable-prompts
-cd nuxeo-composable-prompts
+git clone https://github.com/nuxeo-sandbox/nuxeo-vertesia
+cd nuxeo-vertesia
 mvn clean install -DskipTests
 ```
 
 # Features
 ## Automation API
-The integration between the Nuxeo Platform and ComposablePrompts is meant to be as versatile as possible and leverages Nuxeo's automation framework.
+The integration between the Nuxeo Platform and Vertesia is meant to be as versatile as possible and leverages Nuxeo's automation framework.
 
 ### Run Execution
 The operation to execute a Composable Prompts interaction is `ComposablePrompts.ExecInteraction`
@@ -91,10 +91,6 @@ resources.
 
 This is a moving project (no API maintenance, no deprecation process, etc.) If any of these solutions are found to be
 useful for the Nuxeo Platform in general, they will be integrated directly into platform, not maintained here.
-
-# Nuxeo Marketplace
-This plugin is published on
-the [marketplace](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-composable-prompts)
 
 # License
 [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
